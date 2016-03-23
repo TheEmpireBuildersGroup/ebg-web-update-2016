@@ -1,0 +1,22 @@
+---
+
+type: page
+
+title:  'Homies'
+section: Homies
+cl-sec: 'bg-tan'
+cl-div: 'vrt-m h3 global-list-0'
+
+---
+
+<h3>Friends & people that inspire.</h3>
+
+<section class="max-w-30em">
+  <ul class="mn-0 pd-0">
+    {% for homie in site.data.homies.homies %}
+      <li class="md-in-bl list-0 mn-0">
+        <a class="cstm-line {% cycle 'tan', 'red', 'gray', 'black', 'teal' %}" href="{{ homie.link }}">{{ homie.name }}</a>&ensp;
+      </li>
+    {% endfor %}
+  </ul>
+</section>
